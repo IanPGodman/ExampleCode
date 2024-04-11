@@ -1,0 +1,42 @@
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.p12
+    key-store-password: sK0d4X33!
+    key-store-type: PKCS12
+    key-alias: mycert
+
+
+spring:
+  test:
+    database:
+      replace: none
+  application:
+    name: "Coding Example UNDER_TEST"
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+  datasource:
+
+    url: jdbc:h2:mem:app_example
+    username: sa
+    password:
+    statement-cache-size: 250
+    statement-cache-sql-limit: 2048
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: true
+    contexts: test
+    changelog: classpath:db/changelog/db.changelog-test.yaml
+    url: jdbc:h2:mem:app_example;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS app_example
+    user: sa
+    password:
+    default-schema: app_example
+    drop-first: true
+
+spoonacularResults: 5
+SpoonacularApiKey: YOUR_KEY_HERE

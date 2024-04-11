@@ -1,0 +1,17 @@
+
+
+<h3 class="small">Complete the form and click 'Add Veg' button to add the Vegetable</h3>
+<div class="form-container">
+    <legend>Add Vegetable</legend>
+   <form id="add-neg-form" onsubmit="return addVeg(this)">
+       <label for="veg-name" class="sr-only">Vegetable name</label>
+       <input type="text" id="veg-name" name="veg-name" class="form-control"
+              title="Name of the vegetable being added, must be unique." placeholder="The name of the vegetable to add." required autofocus/>
+       <label for="veg-image" class="sr-only">Vegetable image</label>
+       <input type="file" id="veg-image" name="veg-image" class="form-control" accept="image/*" required
+              title="The image of the vegetable, max size 1MB." />
+       <div class="form-button-div">
+       <button class="btn btn-lg btn-primary btn-block center" type="submit">Add Veg</button>
+       </div>
+   </form>
+</div>

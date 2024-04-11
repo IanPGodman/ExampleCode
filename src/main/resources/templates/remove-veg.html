@@ -1,0 +1,10 @@
+
+
+<h2>Click the Veg to remove</h2>
+<div class="veg-list">
+    <span th:each="veg: ${currentVeglist}">
+         <button class="list-veg-item" th:attr="onclick=|vegRemove('${veg.name}')|">
+            <img class="veg-image" th:src="@{'/images/' + ${veg.image_name}}">
+        </button>
+    </span>
+</div>
